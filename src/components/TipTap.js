@@ -240,6 +240,10 @@ export default () => {
     },
   });
 
+  useEffect(() => {
+    editor?.commands?.setContent(JSON.parse(localStorage.getItem("tiptap")));
+  }, [editor]);
+
   return (
     <div>
       <MenuBar editor={editor} />

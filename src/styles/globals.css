@@ -9,19 +9,34 @@ button {
   background: white;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 #toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  outline: 3px solid black;
+  outline: 2px solid black;
   /* padding: 2rem 0 2rem 0;
   border-radius: 2rem 2rem 0 0; */
   padding: 2rem 2rem;
   margin: 2rem 4rem;
   border-radius: 0.25rem;
 }
+.ProseMirror {
+  padding: 2rem 4rem;
+  margin: 2rem 4rem;
+  border-radius: 0.25rem;
+  background-color: ghostwhite;
+  min-height: 15rem;
+  max-height: fit-content;
+}
+
+.ProseMirror:focus {
+  border: none;
+  outline: none;
+}
+
 /* Basic editor styles */
 .ProseMirror > * + * {
   margin-top: 0.75em;
@@ -67,16 +82,4 @@ button {
   border: none;
   border-top: 2px solid rgba(13, 13, 13, 0.1);
   margin: 2rem 0;
-}
-
-.ProseMirror {
-  padding: 2rem 4rem;
-  margin: 2rem 4rem;
-  border-radius: 0.25rem;
-  background-color: ghostwhite;
-}
-
-.ProseMirror:focus {
-  border: none;
-  outline: none;
 }
