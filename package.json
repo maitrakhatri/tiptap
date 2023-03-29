@@ -9,6 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tiptap/extension-color": "^2.0.0-beta.220",
+    "@tiptap/extension-list-item": "^2.0.0-beta.220",
+    "@tiptap/extension-text-align": "^2.0.0-beta.220",
+    "@tiptap/extension-text-style": "^2.0.0-beta.220",
+    "@tiptap/pm": "^2.0.0-beta.220",
+    "@tiptap/react": "^2.0.0-beta.220",
+    "@tiptap/starter-kit": "^2.0.0-beta.220",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
