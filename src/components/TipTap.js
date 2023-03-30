@@ -11,6 +11,93 @@ const MenuBar = ({ editor }) => {
     return null;
   }
 
+  const initialData = {
+    type: "doc",
+    content: [
+      {
+        type: "heading",
+        attrs: {
+          textAlign: "left",
+          level: 1,
+        },
+        content: [
+          {
+            type: "text",
+            text: "Welcome to TipTap !!",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        attrs: {
+          textAlign: "left",
+          level: 2,
+        },
+        content: [
+          {
+            type: "text",
+            text: "It is cool, it supports Markdown",
+          },
+        ],
+      },
+      {
+        type: "bulletList",
+        content: [
+          {
+            type: "listItem",
+            attrs: {
+              color: null,
+            },
+            content: [
+              {
+                type: "paragraph",
+                attrs: {
+                  textAlign: "left",
+                },
+                content: [
+                  {
+                    type: "text",
+                    marks: [
+                      {
+                        type: "bold",
+                      },
+                    ],
+                    text: "See the list",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "listItem",
+            attrs: {
+              color: null,
+            },
+            content: [
+              {
+                type: "paragraph",
+                attrs: {
+                  textAlign: "left",
+                },
+                content: [
+                  {
+                    type: "text",
+                    marks: [
+                      {
+                        type: "italic",
+                      },
+                    ],
+                    text: "Nice !!",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
       <div id="toolbar">
@@ -208,6 +295,11 @@ const MenuBar = ({ editor }) => {
             }
           >
             justify
+          </button>
+        </div>
+        <div>
+          <button onClick={() => editor?.commands?.setContent(initialData)}>
+            Load Data
           </button>
         </div>
       </div>
